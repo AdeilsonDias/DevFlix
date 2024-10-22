@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>DevFlix-</title>
+  </head>
+
+  <body>
+    <audio src="audio/tudum-netflix-sound.mp3" class="playAudio" controls autoplay></audio>
+    <header>
+      <nav>
+        <a href="#"><img src="imagens/img/logo.png" alt="logo_netflix" /></a>
+        <a href="#"><img src="imagens/img/avatar.png" alt="avatar_perfil" /></a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container_video">
+        <video
+          src="videos/video/round6.mp4"
+          loop
+          autoplay
+          muted
+          class="video_sound"
+        ></video>
+        <button class="sound_button">
+          <i class="bi bi-volume-mute-fill"></i>
+        </button>
+      </div>
+      <div class="container_text">
+        <h1>Round 6</h1>
+        <p class="details">
+          2021 | Classificação etária:18 | 1º temporada |
+          <a href="#">Suspense</a>
+        </p>
+        <p>
+          Centenas de jogadores falidos aceitam um estranho convite para um jogo
+          de sobrevivência. Um prêmio milionário aguarda, mas as apostas são
+          altas e mortais.
+        </p>
+        <div class="creators">
+          <p><span>Estrelando: </span>Lee Jung-jae, Park Hae-soo, Wi Ha-jun</p>
+          <p><span>Criação: </span>Hwang Dong-hyuk</p>
+        </div>
+        <div class="about">
+          <a href="https://www.netflix.com/br/title/81040344 ">Assistir</a>
+          <a href="#" class="informations">Mais informações</a>
+        </div>
+      </div>
+
+      <div class="container_carousel">
+        <button class="prevButton">
+          <i class="bi bi-arrow-left-square-fill"></i>
+        </button>
+
+        <div class="images_carousel">
+          <img
+            src="imagens/img/abyss.jpg"
+            alt="abyss"
+            class="style_images active"
+          />
+          <img
+            src="imagens/img/chokehold.jpg"
+            alt="chokehold"
+            class="style_images"
+          />
+          <img
+            src="imagens/img/moonfall.jpg"
+            alt="moonfall"
+            class="style_images"
+          />
+          <img src="imagens/img/f1.jpg" alt="f1" class="style_images" />
+          <img src="imagens/img/hunter.jpg" alt="hunter" class="style_images" />
+          <img src="imagens/img/jaula.jpg" alt="jaula" class="style_images" />
+          <img src="imagens/img/lift.jpg" alt="lift" class="style_images" />
+          <img
+            src="imagens/img/equalizer.jpg"
+            alt="equalizer"
+            class="style_images"
+          />
+        </div>
+
+        <button class="nextButton">
+          <i class="bi bi-arrow-right-square-fill"></i>
+        </button>
+      </div>
+
+      <div class="modal">
+        <button class="exit_modal style_exit"><i class="bi bi-x-lg"></i></button>
+        <div class="modal_content">
+          <h1>Sobre : 92% gostaram desse programa de TV</h1>
+           <p class="details_modal">Um grupo de
+            pessoas passando por dificuldades financeiras aceita um estranho
+            convite para um jogo de sobrevivência. Um prêmio bilionário os
+            aguarda, mas as apostas são altas e mortais.</p>
+            <p > <span>Primeiro episódio :</span> 17 de setembro de 2021</p>
+            <p> <span>Autor : </span>Hwang Dong-hyuk Criador: Hwang Dong-hyuk</p>
+            <p> <span>Gêneros :</span> Terror, Drama, Suspense, Romance, Ação, Comédia, MAIS</p>
+            <p> <span>Emissora original :</span> Netflix</p>
+          
+        </div>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>

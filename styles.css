@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+  font-style: normal;
+}
+audio{
+  display: none;
+}
+header {
+  background-color: transparent;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 95%;
+  margin: 0 auto;
+  top: 1%; 
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header nav img {
+  height: 25px;
+}
+html,body {
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    position: relative;
+   
+}
+.container_video {
+  overflow-x: hidden;
+}
+.container_video video {
+  width: 100vw;
+  min-height: 80%;
+}
+.sound_button{
+  position: absolute;
+  z-index: 999;
+  top: 75px;
+  color: black;
+  right: 10px;
+  border: none;
+  padding: 7px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+}
+main .container_text {
+  position: absolute;
+  z-index: 3;
+  top: 40%;
+  left: 3%;
+}
+main .container_text h1 {
+    color: white;
+  font-size: 70px;
+}
+main .container_text p {
+  margin-top: 10px;
+  width: 40%;
+  color: whitesmoke;
+  font-size: 18px;
+  font-style: normal;
+}
+main .container_text .about {
+  margin-top: 35px;
+}
+main .container_text .about a:first-child {
+  background-color: rgb(180, 177, 177);
+  padding: 7px 35px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.5s ease-in-out;
+}
+main .container_text .about a:first-child:hover {
+  background-color: rgb(105, 104, 104);
+  color: white;
+}
+
+main .container_text .about a:last-child {
+  background-color: rgb(36, 36, 36);
+  padding: 7px 25px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.5s ease-in-out;
+}
+main .container_text .about a:last-child:hover {
+  background-color: rgb(134, 134, 134);
+  color: black;
+}
+main .container_text .details,
+main .container_text .details a {
+  font-size: 16px;
+  color: rgb(134, 134, 133);
+}
+main .container_text .creators {
+  margin-top: 8px;
+  line-height: 12px;
+}
+main .container_text .creators p span {
+  color: rgb(150, 150, 147);
+}
+.container_carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    top: -17px;
+
+
+}
+.prevButton,.nextButton{
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    border-radius: 7px;
+    outline: none;
+    color: rgb(107, 105, 105);
+    font-size: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    border: none;
+}
+.prevButton:hover,.nextButton:hover{
+    color: rgb(189, 183, 183);
+    transform: scale(1.1);
+}
+.images_carousel{
+        display: flex;
+}
+
+.style_images{
+    height: 200px;
+    display: none;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.4s ease-in-out;
+}
+.style_images:hover{
+  transform: scale(1.03);
+}
+.style_images.active{
+    display: block;
+    animation: active 1s ease-in-out;
+    
+   
+}
+.modal{
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  z-index: 888;
+  background-color:rgb(0, 0, 0,0.97);
+  top: 100px;
+ left: 25%;
+ border-radius: 10px;
+  display: none;
+}
+.modal .style_exit{
+  position: absolute;
+  top: -5px;
+  left: 98%;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: red;
+  font-size: 17px;
+}
+.modal_content {
+  background-color: rgba(76, 80, 80, 0.288);
+  position: relative;
+  top: 17%;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.modal_content h1 {
+  color: white;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.modal_content .details_modal {
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+.modal_content p {
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(110, 112, 112);
+}
+
+@keyframes active {
+  0%{
+    transform:translateY(300px) 
+  }
+  100%{
+    
+    transform: translateX(0);
+  }
+  
+  
+  
+}
+
+
+
+
+
+
+/*RESPONSIVE PHONE */ 
+
+@media  screen and (max-width:770px)and (max-width:991.98px) {
+  header nav{
+    margin-top: 4px;
+  }
+  .sound_button{
+    font-size: 10px;
+    top: 40px;
+    opacity: 0.7;
+  }
+  .container_video{
+    margin-top: 30px;
+  }
+  main .container_text{
+    left: 19%;
+    top: 30%;
+    margin-top: 15px;
+    align-items: center;
+  }
+  main .container_text .details{
+    width: 100%;
+    margin-left: -28px;
+  }
+  
+  main .container_text p {
+    width: 80%;
+    text-align: center;
+   font-size: 18px;
+   margin-top: 18px;
+  }
+  main .container_text .creators {
+    align-items: center;
+    line-height: 19px;
+  }
+  main .container_text .about {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -25%;
+  gap:20px;
+  }
+  main .container_text .about a {
+
+    text-align: center;
+  }
+main{
+  margin: 0 auto;
+}
+  .container_carousel{
+    left: 0;
+    top: 580px;
+    padding: 20px;
+  }
+  .style_images{
+    height: 100px;
+  }
+  .modal{
+    width: 80%;
+    height: 50%;
+    left: 13%;
+    background-color:rgb(78, 78, 78);
+    animation: modalanimation 0.4s ease-in-out;
+    
+  }
+  .modal_content{
+    width: 80%;
+    background-color: rgb(36, 35, 35);
+    top: 15px;
+  }
+  .modal_content h1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .modal_content .details_modal{
+    font-size: 14px;
+    color: rgb(241, 232, 221);
+    margin-bottom: 10px;
+  }
+  .modal_content p{
+    font-size: 12px;
+    color: cadetblue;
+  }
+  .modal .style_exit{
+    left: 94%;
+  }
+  @keyframes modalanimation {
+    0%{
+      transform:translateX(+300px) 
+    }
+    100%{
+      
+      transform: translateX(0);
+    }
+    
+  }
+}
+/*RESPONSIVE TABLETS */
+@media   screen and (min-width:834px) and (max-width:1199.98px) {
+  header nav{
+    margin-top: 4px;
+  }
+  .sound_button{
+    font-size: 10px;
+    top: 43px;
+    opacity: 0.7;
+  }
+  .container_video{
+    margin-top: 30px;
+  }
+  main .container_text{
+    left: 30%;
+    top: 49%;
+    margin-top: 15px;
+    align-items: center;
+    margin-left: -25%;
+  }
+  main .container_text h1 {
+    text-align: center;
+    margin:  auto;
+  }
+  main .container_text .details{
+    width: 100%;
+   margin: auto;
+   margin-bottom: 25px;
+  }
+  
+  main .container_text p {
+    width: 80%;
+    text-align: center;
+   font-size: 18px;
+   margin: auto; 
+   margin-bottom: 20px;
+  }
+  main .container_text .creators {
+    align-items: center;
+    line-height: 19px;
+  }
+  main .container_text .about {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -25%;
+
+  margin: auto;
+  gap:20px;
+  }
+  main .container_text .about a {
+
+    text-align: center;
+  }
+main{
+  margin: 0 auto;
+}
+  .container_carousel{
+    left: 0;
+    top: 420px;
+    
+  }
+  .style_images{
+    height: 150px;
+  }
+  .modal{
+    width: 80%;
+    height: 37%;
+    left: 10%;
+    top: 60%;
+    background-color:rgba(78, 78, 78, 0.993);
+    animation: modalanimation 0.4s ease-in-out;
+    
+  }
+  .modal_content{
+    width: 70%;
+    background-color: rgb(36, 35, 35);
+    top: 30px;
+    height: 80%;
+
+  }
+  .modal_content h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .modal_content .details_modal{
+    font-size: 14px;
+    color: rgba(241, 232, 221, 0.514);
+    width: 80%;
+    margin:  auto;
+    margin-bottom: 14px;
+  }
+  .modal_content p{
+    margin-top: 14px;
+    font-size: 13px;
+    color: rgb(253, 253, 253);
+  }
+  .modal_content p span{
+    color: rgb(0, 255, 0);
+  }
+  .modal .style_exit{
+    left: 97%;
+  }
+ body{
+  height: 80%;
+ }
+  @keyframes modalanimation {
+    0%{
+      transform:translateX(+300px) 
+    }
+    100%{
+      
+      transform: translateX(0);
+    }
+    
+  }
+} 
